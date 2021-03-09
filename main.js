@@ -195,9 +195,7 @@ If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "br
 
 const flipArray = (arr) => {
     outputObject = {};
-    for (let i = 0; i < arr.length; i++) {
-        outputObject[arr[i]] = i;
-    }
+    arr.forEach((value, index) => outputObject[value] = index); 
     return outputObject;
 }
 
@@ -265,9 +263,13 @@ If you pass it "yay" then it should return false because it's odd
 If you pass it "heehaw" then it should return false because "hee" doesn't equal "haw"
 */
 
-
-
-
+const repeats = (str) => {
+    firstHalf = str.substring(0, str.length/2);
+    console.log(firstHalf);
+    secondHalf = str.substring(str.length/2);
+    console.log(secondHalf);
+    return (str.length % 2 === 0) ? false : (firstHalf === secondHalf);
+}
 
 
 
