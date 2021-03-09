@@ -31,7 +31,15 @@ results on the index page in the browser.
 */
 
 
-
+const sum = (arr) =>  {
+    if (arr.length===0){return 0}
+    let sum = 0 ; 
+    for(let i=0; i<arr.length; i++){
+        console.log(" I am at position", i, "passing", arr[i]);
+        sum+= arr[i];
+    }
+    return sum;
+}
 
 
 
@@ -49,7 +57,13 @@ Example: if you pass it "abc" then it should return "aabbcc"
 */
 
 
-
+const doubleLetters = (str) => {
+    let doubleLetterString = '';
+    for (let s of str) {
+        doubleLetterString += s+s;
+    }
+    return doubleLetterString;
+}
 
 
 
@@ -67,7 +81,17 @@ Write function named doubleNumbers that will take an array of numbers and return
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
+const doubleNumbers = (numberArr) => {
+    let numberArrDoubled = [];
+    for (let i = 0; i < numberArr.length; i++) {
+        numberArrDoubled[i] = 2* numberArr[i];
+    }
+    return numberArrDoubled;
 
+    /* oneliner: 
+    return numberArr.map((num)=> num*2);
+    */
+}
 
 
 
@@ -90,7 +114,15 @@ Examples:
 */
 
 
-
+const multiplyNumbers = (numberArr, multiplicator) => {
+    /* let numberArrMultiplied = [];
+    for (let i = 0; i < numberArr.length; i++) {
+        numberArrMultiplied[i] = multiplicator * numberArr[i];
+    }
+    return numberArrMultiplied;
+ */
+    return numberArr.map((num) => num * multiplicator);
+}
 
 
 
@@ -110,7 +142,14 @@ Example: if you pass it ["a", "b", "c"] and ["d", "e", "f"] then it should retur
 NOTE: you can assume each input will be the same length
 */
 
-
+const interleave = (arr1, arr2) => {
+    let interLeavedArr = [];
+    for (let i = 0, j = 0; i,j < arr1.length; i+=2, j++) {
+        interLeavedArr[i] = arr1[j];
+        interLeavedArr[i+1] = arr2[j];
+    }
+    return interLeavedArr;
+}
 
 
 
@@ -130,7 +169,16 @@ Write function named createRange that will take a number and a default value and
 Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "Hello", "Hello"]
 */
 
+const createRange = (multiplicator, anyValue) => {
 
+    outputArr = [];
+    for (let i = 0; i < multiplicator; i++) {
+        outputArr.push(anyValue);
+    }
+    return outputArr;
+
+   // return anyValue.map((el) => el * multiplicator);
+}
 
 
 
@@ -149,7 +197,13 @@ Example:
 If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "brown": 1, "fox": 2 }
 */
 
-
+const flipArray = (arr) => {
+    outputObject = {};
+    for (let i = 0; i < arr.length; i++) {
+        outputObject[arr[i]] = i;
+    }
+    return outputObject;
+}
 
 
 
@@ -169,7 +223,13 @@ If you pass it [[2014, "Horse"], [2015, "Sheep"]] then it should return { 2014: 
 
 */
 
-
+const arraysToObject = (nestedArr) => {
+    outputObject = {};
+    for (let i = 0; i < nestedArr.length; i++){
+        outputObject[nestedArr[i][0]] = nestedArr[i][1];
+    }
+    return outputObject;
+}
 
 
 
