@@ -176,6 +176,12 @@ const createRange = (multiplicator, anyValue) => {
     
 }
 
+/* // alternative:
+
+const createRange = (multiplier, value) => {
+    let arr = new Array(multiplier);
+    return arr.fill(value);
+} */
 
 
 
@@ -218,6 +224,7 @@ If you pass it [[2014, "Horse"], [2015, "Sheep"]] then it should return { 2014: 
 
 const arraysToObject = (nestedArr) => {
     outputObject = {};
+
     for (let i = 0; i < nestedArr.length; i++){
         outputObject[nestedArr[i][0]] = nestedArr[i][1];
     }
@@ -264,11 +271,7 @@ If you pass it "heehaw" then it should return false because "hee" doesn't equal 
 */
 
 const repeats = (str) => {
-    firstHalf = str.substring(0, str.length/2);
-    console.log(firstHalf);
-    secondHalf = str.substring(str.length/2);
-    console.log(secondHalf);
-    return (str.length % 2 === 0) ? false : (firstHalf === secondHalf);
+    return !(str.length % 2 === 0) ? false : (str.substring(0, str.length/2) === str.substring(str.length/2));
 }
 
 
@@ -287,7 +290,7 @@ If you pass it "abcdef" then it should return "ace" because those represent ever
 */
 
 
-
+// I DONT GET THE QUESTION. ???
 
 
 
@@ -306,7 +309,11 @@ If you pass "aaa" it should return true
 If you pass "aba" it should return false
 */
 
-
+const allEqual = (str) => {
+    let mySet = new Set(str.split(""));
+    console.log(mySet);
+    return (str === "") ? true : mySet.size === 1;
+}
 
 
 
