@@ -209,7 +209,6 @@ const flipArray = (arr) => {
 
 
 
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -232,11 +231,6 @@ const arraysToObject = (nestedArr) => {
 }
 
 
-
-
-
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -249,12 +243,13 @@ Example:
 If you pass it "hello" then it should return "olleh"
 */
 
-
-
-
-
-
-
+const reverseString = (str) => {
+    let reverseAccumulator = "";
+    for (let i = str.length; i >= 0; i--){
+        reverseAccumulator += str.charAt(i);
+    }
+    return reverseAccumulator;
+}
 
 
 
