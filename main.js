@@ -82,15 +82,15 @@ Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
 const doubleNumbers = (numberArr) => {
-    let numberArrDoubled = [];
+/*     let numberArrDoubled = [];
     for (let i = 0; i < numberArr.length; i++) {
         numberArrDoubled[i] = 2* numberArr[i];
     }
     return numberArrDoubled;
-
-    /* oneliner: 
+ */
+    
     return numberArr.map((num)=> num*2);
-    */
+   
 }
 
 
@@ -155,10 +155,6 @@ const interleave = (arr1, arr2) => {
 
 
 
-
-
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -177,7 +173,7 @@ const createRange = (multiplicator, anyValue) => {
     }
     return outputArr;
 
-   // return anyValue.map((el) => el * multiplicator);
+    
 }
 
 
